@@ -2,7 +2,7 @@
     {
 
         "slika" : {
-            "putanja" : "/images/brainstorm.png",
+            "putanja" : "images/brainstorm.png",
             "alt" : "Picture of brainstorming"
         },
         
@@ -13,7 +13,7 @@
     {
 
         "slika" : {
-            "putanja" : "/images/rocket.png",
+            "putanja" : "images/rocket.png",
             "alt" : "Picture of a rocket !"
         },
         
@@ -24,7 +24,7 @@
     {
 
         "slika" : {
-            "putanja" : "/images/laptop.png",
+            "putanja" : "images/laptop.png",
             "alt" : "Picture of a laptop !"
         },
         
