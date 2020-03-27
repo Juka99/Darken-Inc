@@ -1,0 +1,28 @@
+[
+    
+    {
+        "href" : "#pocetak",
+        "text" : "Home"
+    },
+
+    {
+        "href" : "#about",
+        "text" : "About Us"
+    },
+
+    {
+        "href" : "#games",
+        "text" : "Games"
+    },
+
+    {
+        "href" : "#shop",
+        "text" : "Shop"
+    },
+
+    {
+        "href" : "#kontakt",
+        "text" : "Contact"
+    }
+
+]

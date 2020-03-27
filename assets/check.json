@@ -1,0 +1,33 @@
+[
+
+    {
+
+        "id" : 1,
+        "value" : "shooter",
+        "idKat" : 1,
+        "idCheck" : "checkboxOne",
+        "labelNaziv" : "Shooter"
+
+    },
+
+    {
+
+        "id" : 2,
+        "idKat" : 2,
+        "value" : "rpg",
+        "idCheck" : "checkboxTwo",
+        "labelNaziv" : "RPG"
+
+    },
+
+    {
+
+        "id" : 3,
+        "idKat" : 3,
+        "value" : "strategy",
+        "idCheck" : "checkboxThree",
+        "labelNaziv" : "Strategy"
+
+    }
+
+]

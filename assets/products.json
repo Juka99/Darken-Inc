@@ -1,0 +1,513 @@
+[
+
+    {
+
+        "id" : 1,
+
+        "naziv" : "Age Of Empires",
+
+        "slika" : {
+
+            "putanja" : "../images/ageOfEmpires.jpg",
+            "alt" : "Age Of Empires Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Strategy",
+            "idKat" : 3
+
+        },
+
+        "novaCena" : 40,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 2,
+
+        "naziv" : "Age Of Mythology",
+
+        "slika" : {
+
+            "putanja" : "../images/ageOfMythology.jpg",
+            "alt" : "Age Of Mythology Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Strategy",
+            "idKat" : 3
+
+        },
+
+        "novaCena" : 45,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 3,
+
+        "naziv" : "Call Of Duty",
+
+        "slika" : {
+
+            "putanja" : "../images/callOfDuty.jpg",
+            "alt" : "Call Of Duty Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 30,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 50,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 4,
+
+        "naziv" : "Civilization",
+
+        "slika" : {
+
+            "putanja" : "../images/civilization6.jpg",
+            "alt" : "Civilization VI Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Strategy",
+            "idKat" : 3
+
+        },
+
+        "novaCena" : 45,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 80,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 5,
+
+        "naziv" : "Counter Strike",
+
+        "slika" : {
+
+            "putanja" : "../images/counterStrike.jpg",
+            "alt" : "Counter Strike Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 20,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 6,
+
+        "naziv" : "Dark Souls 3",
+
+        "slika" : {
+
+            "putanja" : "../images/darkSouls.jpeg",
+            "alt" : "Dark Souls Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "RPG",
+            "idKat" : 2
+
+        },
+
+        "novaCena" : 45,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 55,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 7,
+
+        "naziv" : "Crysis 3",
+
+        "slika" : {
+
+            "putanja" : "../images/crysis.jpg",
+            "alt" : "Crysis Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 15,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 30,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 8,
+
+        "naziv" : "Witcher 3",
+
+        "slika" : {
+
+            "putanja" : "../images/witcher.jpg",
+            "alt" : "Witcher 3 Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "RPG",
+            "idKat" : 2
+
+        },
+
+        "novaCena" : 60,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 9,
+
+        "naziv" : "Warhammer 2",
+
+        "slika" : {
+
+            "putanja" : "../images/warhammer.jpg",
+            "alt" : "Warhammer 2 Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "RPG",
+            "idKat" : 2
+
+        },
+
+        "novaCena" : 35,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 10,
+
+        "naziv" : "Destiny 2",
+
+        "slika" : {
+
+            "putanja" : "../images/destiny.jpg",
+            "alt" : "Destiny 2 Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 50,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 80,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 11,
+
+        "naziv" : "Doom 3",
+
+        "slika" : {
+
+            "putanja" : "../images/doom.jpg",
+            "alt" : "Doom 3 Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 25,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 12,
+
+        "naziv" : "Star Craft 2",
+
+        "slika" : {
+
+            "putanja" : "../images/starCraft.jpg",
+            "alt" : "Star Craft 2 Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Strategy",
+            "idKat" : 3
+
+        },
+
+        "novaCena" : 45,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 65,
+        
+        "quantity" : 1 
+
+    },
+
+    {
+
+        "id" : 13,
+
+        "naziv" : "Spore",
+
+        "slika" : {
+
+            "putanja" : "../images/spore.jpg",
+            "alt" : "Spore Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "RPG",
+            "idKat" : 2
+
+        },
+
+        "novaCena" : 15,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 20,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 14,
+
+        "naziv" : "Mass Effect",
+
+        "slika" : {
+
+            "putanja" : "../images/massEffect.jpg",
+            "alt" : "Spore Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 35,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 20,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 15,
+
+        "naziv" : "Medal Of Honor",
+
+        "slika" : {
+
+            "putanja" : "../images/medalOfHonor.jpg",
+            "alt" : "Medal Of Honor Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 45,
+
+        "imaStaruCenu" : false,
+
+        "staraCena" : 20,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 16,
+
+        "naziv" : "Skyrim",
+
+        "slika" : {
+
+            "putanja" : "../images/skyrim.jpg",
+            "alt" : "Skyrim Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "RPG",
+            "idKat" : 2
+
+        },
+
+        "novaCena" : 35,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 50,
+        
+        "quantity" : 1
+
+    },
+
+    {
+
+        "id" : 17,
+
+        "naziv" : "Rainbow Six Siege",
+
+        "slika" : {
+
+            "putanja" : "../images/rainbowSixSiege.jpg",
+            "alt" : "Rainbow Six Siege Game"
+
+        },
+
+        "category" : {
+
+            "katNaziv" : "Shooter",
+            "idKat" : 1
+
+        },
+
+        "novaCena" : 30,
+
+        "imaStaruCenu" : true,
+
+        "staraCena" : 40,
+        
+        "quantity" : 1
+
+    }
+
+]

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta name="keywords" content="Games, Darken Games, Darken, Darken Inc, Cheap, Trending Games"/>
+    <meta name="description" content="Welcome to the official website of Darken Inc. Here you can find all the games we have to offer and read all the info you need. You will find the games here are so cheap they are almost as free !"/>
+    <meta name="author" content="Aleksa Jukic"/>
+
+    <!-- Fa-fa icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/>
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Fav Icon -->
+
+    <link rel="icon" href="images/logo.png"/>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <title>Darken Inc.</title>
+
+</head>
+
+<body>
+    
+    <!-- Navigacija -->
+
+    <nav id='navigacija'>
+
+        <div class="left">
+            
+        </div>
+
+        <div class="right">
+
+        </div>
+
+    </nav>
+
+    <!-- Side Navigacija -->
+
+    <div class="sideNav">
+
+        <div class="darkenSideNav">
+
+            <div class="right">
+
+                <p>Navigation</p>
+    
+            </div>
+
+            <div class="left">
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Burger ikonica -->
+
+    <a href="#!" id='burgerActivate'><i class="fas fa-bars"></i></a>
+
+    <!-- Go top arrow -->
+
+    <a href="#!" class='goTop'><i class="fas fa-chevron-up"></i></a>
+
+    <!-- Main sekcija -->
+
+    <main id='pocetak'>
+
+        <div class="fader container-fluid">
+
+            <div class="container naslov">
+
+                <h1>Darken Inc.</h1>
+
+                <h2 id='fillMe'></h2>
+
+                <a href="#about"><i class="fas fa-gamepad"></i></a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Sekcija O Nama -->
+    
+    <section class="container-fluid about" id='about'>
+
+        <div class="container aboutCont row">
+
+            <div class="leftAbout col-lg-6">
+
+                <h2>About Us</h2>
+                <p>Welcome to Darken Inc, home of all games ! We started off in 2018 as a group of friends who just wanted to sell a little bit of video games. As the time past, we continued to sell more and more awesome games, and we decided to add bussiness to our passion ! Since then, we sell hundreds of games per month with the most ridicilous low prices !</p>
+                <p>If you want to check our shop, click the button below :</p>
+
+                <a href="#shop" class='pulse'>Shop</a>
+                
+            </div>
+
+            <div class="rightAbout col-lg-6">
+
+                <img src="images/vector2.png" class="img-fluid" alt="Vector picture"/>
+
+            </div>
+
+        </div>
+
+
+        <div class="container aboutCont row">
+
+            <div class="rightAbout col-lg-6">
+
+                <img src="images/author.jpg" class="img-fluid" alt="Author"/>
+
+            </div>
+
+            <div class="leftAbout1 col-lg-6">
+
+                <h2>About Author</h2>
+                <p>Hey there ! You must be wondering, how can a website look this cool ? One word for you : BRAINSTORMING ! I am a 20 year old student at ICT college studying to become a web developer. I am mostly interested in front-end development and I enjoy every moment of coding. Every of my websites is unique and made in a special way.</p>
+                <p>If you want to check out my work, click the button below :</p>
+
+                <a href="https://github.com/Juka99" target="_blank" class='pulse'>Portfolio</a>
+                
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section class="container-fluid brainStorm">
+
+        <div class="contBrainstorm">
+
+            <h2>Why do we have the best games ?</h2>
+
+            <div class="transpSlike row">
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Papir kamen makaze -->
+
+    <section class="rockPaper container-fluid" id='games'>
+
+        <h3>Up for a game of <span>rock</span>, <span>paper</span>, <span>scissors</span> ?</h3>
+
+        <div class="container rockPaperContainer">
+
+            <div class="row rockPaperRow">
+
+                    <p id='midScore'><span id="player"></span> : <span id="ai"></span></p>
+
+                <div class="score">
+                    <p id='topScore'>You : <span id='youSign'></span></p>
+                    
+                    <p id='botScore'>Computer : <span id='aiSign'></span></p>
+                </div>
+
+                <p class='status'></p>
+
+            </div>
+
+            <div class="row rockPaperRow1">
+
+                <div class="signs">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class='ticTacToe container-fluid'>
+
+    <h3 id='ticH3'>Or maybe <span class='orange'>Tic</span> <span class='orange'>Tac</span> <span class='orange'>Toe</span> ?</h3>
+
+    <h4 id='ticH4'>Don't worry, you'll win !</h4>
+
+    <h4 id='statusPobeda' class="moveMe">It's a win !</h4>
+    <h4 id='statusPoraz' class="moveMe">You lost !</h4>
+    <h4 id='statusTie' class="moveMe">It's a tie !</h4>
+
+    <div id="ticTacToe">
+
+        <a class="box" id='box1' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box2' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box3' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box4' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box5' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box6' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box7' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box8' href='#!'>
+            
+        </a>
+
+        <a class="box" id='box9' href='#!'>
+            
+        </a>
+
+    </div>
+
+    <a href="#!" id='playAgain'>Play again :)</a>
+
+    </section>
+
+    <!-- Make your avatar section -->
+
+    <section class='container-fluid avatar'>
+
+        <div class="container avatarCont">
+
+            <h2>Make your Avatar !</h2>
+
+            <div class="avatarButtons">
+
+                <button id="avatarButton">See Avatar</button>
+
+                <button id="avatarCustomize">Customize Avatar</button>
+
+            </div>
+
+            <div class="avatarMakerDiv">
+
+                <div class="avatarCardHolder">
+
+                    <h3>Your Avatar</h3>
+
+                        <div id="avatarCard">
+
+                            <div class="avatarPuppet">
+
+                                    <!-- <div class="avatarHead">
+
+                                        <img src="images/avatar2.png" class="img-fluid avatarHeadPic" alt="Your Avatar head"/>
+
+                                    </div>
+
+                                    <div class="avatarBody">
+
+                                        <img src="images/armor1.png" class="img-fluid avatarArmorPic" alt="Your Avatar armor"/>
+
+                                    </div>
+
+
+                                    <div class="leftArm avatarArm"></div>
+
+                                    <div class="rightArm avatarArm"></div>
+
+                                    <div class="leftLeg avatarLeg"></div>
+
+                                    <div class="rightLeg avatarLeg"></div>
+
+                                    <div class="avatarWeapon">
+
+                                        <img src="images/weapon1.png" class="img-fluid avatarWeaponPic" alt="Your Avatar weapon"/>
+                                        
+                                    </div>
+
+                                    <div class="avatarShield">
+
+                                        <img src="images/shield1.png" class="img-fluid avatarShieldPic" alt="Your Avatar shield"/>
+
+                                    </div> -->
+
+                            </div>
+
+                            <div class="avatarNameAndLevel">
+
+                                <h4 id='avatarName'>Name</h4>
+
+                                <p>Level : 1</p>
+
+                            </div>
+
+                        </div>
+
+                </div>
+
+                <div class="avatarCustomizeDiv">
+
+                    <h3>Customize your Avatar</h3>
+
+                    <div class="customization">
+
+                        <div class="custom">
+
+                            <p>Choose the head</p>
+
+                            <div class="headChoices">
+
+                                <label>
+
+                                    <input type="radio" name="headAvatar" value='avatar1' class='imgRadio'/>
+                                    
+                                    <img src="images/avatar1.png" class="img-fluid avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="headAvatar" value='avatar2' class='imgRadio'/>
+                                    
+                                    <img src="images/avatar2.png" class="img-fluid avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="headAvatar" value='avatar3' class='imgRadio'/>
+                                    
+                                    <img src="images/avatar3.png" class="img-fluid avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="headAvatar" value='avatar4' class='imgRadio'/>
+                                    
+                                    <img src="images/avatar4.png" class="img-fluid avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="headAvatar" value='avatar5' class='imgRadio'/>
+                                    
+                                    <img src="images/avatar5.png" class="img-fluid avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                            </div>
+
+                            <p class="errorPar" id='headError'>You didn't choose a head</p>
+
+                            <p>Choose the armor</p>
+
+                            <div class="armorChoices">
+
+                                <label>
+
+                                    <input type="radio" name="armorAvatar" value='armor1' class='imgRadio'/>
+                                    
+                                    <img src="images/armor1.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="armorAvatar" value='armor2' class='imgRadio'/>
+                                    
+                                    <img src="images/armor2.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                            </div>
+
+                            <p class="errorPar" id='armorError'>You didn't choose an armor</p>
+
+                            <p>Choose the weapon</p>
+
+                            <div class="armorChoices">
+
+                                <label>
+
+                                    <input type="radio" name="weaponAvatar" value='weapon1' class='imgRadio'/>
+                                    
+                                    <img src="images/weapon1.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="weaponAvatar" value='weapon2' class='imgRadio'/>
+                                    
+                                    <img src="images/weapon2.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="weaponAvatar" value='weapon3' class='imgRadio'/>
+                                    
+                                    <img src="images/weapon3.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                            </div>
+
+                            <p class="errorPar" id='weaponError'>You didn't choose a weapon</p>
+
+                            <p>Choose the shield</p>
+
+                            <div class="armorChoices">
+
+                                <label>
+
+                                    <input type="radio" name="shieldAvatar" value='shield1' class='imgRadio'/>
+                                    
+                                    <img src="images/shield1.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="shieldAvatar" value='shield2' class='imgRadio'/>
+                                    
+                                    <img src="images/shield2.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                                <label>
+
+                                    <input type="radio" name="shieldAvatar" value='shield3' class='imgRadio'/>
+                                    
+                                    <img src="images/shield3.png" class="img-fluid armorMe avatarCustomPic avatarHeadPic" alt="Your Avatar head"/>
+
+                                </label>
+
+                            </div>
+
+                            <p class="errorPar" id='shieldError'>You didn't choose a shield</p>
+
+                            <div class="armsLegs">
+
+                                <div class="customPart">
+
+                                    <p>Choose the arm's color</p>
+
+                                    <input type="color" id='armsColor' value='#ffffff' class="colorPicker"/>
+
+                                </div>
+
+                                <div class="customPart">
+
+                                    <p>Choose the leg's color</p>
+
+                                    <input type="color" id='legsColor' value='#ffffff' class="colorPicker"/>
+
+                                </div>
+
+                            </div>
+
+                            <a href="#!" id='makeMyAvatar' class='pulse'>Save</a>
+
+                            <p class='successPar'>Your new Avatar is made !</p>
+
+                            <p class='errorAvatarPar'>You didn't choose something !</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Shop -->
+
+    <section class='container-fluid shopDarken' id='shop'>
+
+        <h2>Time to shop !</h2>
+
+        <h3 id='sortHeading'>Sort and search !</h3>
+
+        <div class="searchAndSort">
+
+            <select class='odvojiMe' name="biraj" id="birajDarkenDrop">
+
+                <option value="0">Sort</option>
+                <option value="opada">Price : High to low</option>
+                <option value="raste">Price : Low to high</option>
+                <option value="a_z">Alphabet : A-Z</option>
+                <option value="z_a">Alphabet : Z-A</option>
+    
+            </select>
+    
+            <input type="search" id='trazi' class='odvojiMe' placeholder="Type a name of the game"/>
+
+        </div>
+
+        <div class="birajDarken">
+
+            <h3 id='categoryHeading'>Filter by category !</h3>
+
+            <!-- Checkboxovi -->
+
+            <ul class="checksHolder">
+                <!-- <li><input type="checkbox" class='checkShop' id="checkboxOne" value="shooter"><label for="checkboxOne">Shooter</label></li>
+                <li><input type="checkbox" class='checkShop' id="checkboxTwo" value="rpg" ><label for="checkboxTwo">RPG</label></li>
+                <li><input type="checkbox" class='checkShop' id="checkboxThree" value="strategy" ><label for="checkboxThree">Strategy</label></li> -->
+              </ul>
+
+        </div>
+
+        <div class="row rowShop">
+
+            <!-- <div class="col-lg-3 col-md-6 colShop">
+
+                <div class="product">
+
+                    <div class="productPicture">
+
+                        <img src="images/medalOfHonor.jpg" alt="Game" class='img-fluid productPictureImg'/>
+
+                        <h3 class='nameOfTheGame'>Ime igre</h3>
+
+                        <div class="cenaIgre">
+                        
+                            <p class='novaCena'>Nova cena</p>
+
+                            <p class='staraCena'><del>Stara cena</del></p>
+                       
+                        </div>
+
+                        <p class='categoryShop'>Category : </p>
+
+                        <a href="#!" class='orderGame'>Order now !</a>
+
+                    </div>
+
+                </div>
+
+            </div> -->
+
+        </div>
+
+
+    </section>
+
+
+    <!-- Corvus -->
+
+    <section class='container-fluid corvus'>
+
+        <div class="topCorvus">
+
+            <h3><span>Corvus</span></h3>
+            <h4>Your virtual assistant</h4>
+
+        </div>
+
+        <div class="midCorvus">
+
+            <input type="text" placeholder="Please enter your name : Alex" id='imeCorvus'/>
+            <button id='sacuvajImeCorvus'>Save</button>
+
+        </div>
+
+        <div class="botCorvus">
+
+            <button class="talk">Click here and then talk</button>
+
+        </div>
+
+        <h3 id='corvusHeard'>What Corvus heard : <span class='content'></span></h3>
+
+        <div class="whatCanYouSay">
+
+            <p>What can you ask and say to Corvus :</p>
+            
+            <ul>
+                <li>Hello</li>
+                <li>Is it going to rain today</li>
+                <li>Tell me a joke</li>
+                <li>Tell me a sentence</li>
+                <li>Where can I find the best games ?</li>
+                <li>Who is the best professor ?</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cart -->
+
+    <div class="cart">
+            <div class="modalHead">
+
+                <p>Your Cart</p>
+                
+                <a href="#!" id='zatvoriModal'><i class='fas fa-times'></i></a>
+
+            </div>
+            <div class="modalBody">
+
+                <p id='noProductsPar'>You have no products in the cart !</p>
+
+                <table id='modalTabela'>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Picture</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Add</th>
+                            <th>Delete</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class='puniIgricama'>
+
+                        <!-- <tr>
+
+                            <td><img src="images/massEffect.jpg" class='img-fluid slikaCart' alt="Mass Effect"/></td>
+                            <td>Mass Effect</td>
+                            <td>355%</td>
+                            <td>1</td>
+                            <td><button id='addMeMore'>Add another</button></td>
+                            <td><button id='deleteMeMore'>Delete</button></td>
+
+                        </tr> -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <div class="modFooter">
+              <button type="button" class="resetLocalGames">Reset cart</button>
+              <button type="button" class="proceedButton">Proceed to checkout</button>
+            </div>
+      </div>
+
+    <!-- Button cart -->
+
+    <a href="#!" id='prikaziCart' data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-shopping-cart"></i></a>
+
+    <!-- Check i Already have this game in cart blokovi -->
+
+    <div class="drzacPopupa">
+
+        <div class="checkBlock addedBlock">
+
+            <i class="fas fa-check"></i>
+            <p>The game is added !</p>
+    
+        </div>
+    
+        <div class="checkBlock alreadyThereBlock">
+    
+            <i class="fas fa-exclamation"></i>
+            <p>You already have this game in your cart !</p>
+    
+        </div>
+
+        <div class="checkBlock addedNameBlock">
+
+            <i class="fas fa-check"></i>
+            <p>New name is saved !</p>
+    
+        </div>
+
+        <div class="checkBlock nameNotCorrect">
+    
+            <i class="fas fa-exclamation"></i>
+            <p>Name is not in the correct format !</p>
+    
+        </div>
+
+    </div>
+
+
+    <!-- Kontakt forma -->
+
+    <section class='forma' id='kontakt'>
+
+        <div class="container formaCont">
+
+            <h3>Contact Us</h3>
+
+            <form action="index.html" method="POST" onsubmit="proveriFormu">
+
+                <input type="text" class='inputPolje' id='imeIprezime' placeholder="Your full name : John Doe"/>
+
+                <p class='errorForm' id='fullNameError'>You didn't enter your full name in a correct format !</p>
+
+                <br/>
+
+                <input type="text" class='inputPolje' id='mail' placeholder="john@gmail.com"/>
+
+                <p class='errorForm' id='emailError'>You didn't enter your email in a correct format !</p>
+
+                <br/>
+
+                <select name="tema" id="tema">
+
+                    <option value="0">Choose a topic...</option>
+                    <option value="games">Games</option>
+                    <option value="complaint">Complaints</option>
+                    <option value="partner">Partnership</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+                <p class='errorForm' id='topicError'>You didn't choose a topic !</p>
+
+                <br/>
+
+                <textarea name="area" id="area" class='inputPolje' cols="30" rows="10" placeholder="Message"></textarea>
+
+                <p class='errorForm' id='messageError'>You didn't enter your message !</p>
+
+                <br/>
+
+                <input type="submit" id='posaljiPodatke' name='podaci' value='Send'/>
+
+                <p class='uspehPar'>Amazing ! We will get to you shortly !</p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class='container-fluid'>
+
+        <div class="row rowFooter">
+
+            <div class="col-lg-4 colFooter">
+
+                <div class="left"></div>
+
+            </div>
+
+            <div class="col-lg-4 colFooter">
+
+                <p id='navigacijaPar'>Navigation</p>
+
+                <div class="right"></div>
+
+            </div>
+
+            <div class="col-lg-4 colFooter">
+
+                <p>&copy;Copyright Darken Inc. 2020</p>
+                <p>All rights reserved.</p>
+
+            </div>
+
+        </div>
+
+        <div class="row rowFooter1">
+
+            <p>Useful links</p>
+
+            <div class="usefulLinks">
+
+                <a href="sitemap.xml" target="_blank">XML</a>
+                <a href="darkenIncDoc.pdf" download>Documentation</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- jQuery CDN -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- Bootstrap  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Moj js -->
+
+    <script src="js/avatar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/corvus.js"></script>
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>

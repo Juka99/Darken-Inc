@@ -1,0 +1,34 @@
+[
+    {
+
+        "slika" : {
+            "putanja" : "../images/brainstorm.png",
+            "alt" : "Picture of brainstorming"
+        },
+        
+        "naslov" : "We brainstorm for the best games on the market for you !"
+
+    },
+
+    {
+
+        "slika" : {
+            "putanja" : "../images/rocket.png",
+            "alt" : "Picture of a rocket !"
+        },
+        
+        "naslov" : "We gather all the best games and get them ready to launch !"
+
+    },
+
+    {
+
+        "slika" : {
+            "putanja" : "../images/laptop.png",
+            "alt" : "Picture of a laptop !"
+        },
+        
+        "naslov" : "We add them to our website for you to buy and enjoy in !"
+
+    }
+]

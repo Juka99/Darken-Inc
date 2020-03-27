@@ -1,0 +1,3235 @@
+@font-face{
+
+    src : url('../frozen.ttf');
+    font-family: frozen;
+
+}
+
+$d0: 1390px;
+$d1: 1120px;
+$d2: 992px;
+$d3: 768px;
+$d4: 576px;
+$d5: 480px;
+$d6: 386px;
+
+$f : flex;
+$sa : space-around;
+$sb : space-between;
+$c : center;
+$fw : wrap;
+$co : column;
+
+@mixin d0 {
+    @media (max-width: #{$d0}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+
+@mixin d2 {
+    @media (max-width: #{$d2}){
+        @content;
+    }
+}
+
+@mixin d3 {
+    @media (max-width: #{$d3}){
+        @content;
+    }
+}
+
+@mixin d4 {
+    @media (max-width: #{$d4}){
+        @content;
+    }
+}
+
+@mixin d5 {
+    @media (max-width: #{$d5}){
+        @content;
+    }
+}
+
+@mixin d6 {
+    @media (max-width: #{$d6}){
+        @content;
+    }
+}
+
+*{
+    margin : 0px;
+    padding : 0px;
+    font-family: frozen;
+}
+
+html{
+
+    scroll-behavior: smooth;
+
+}
+
+body{
+
+    position: relative;
+    background-color: #141414;
+    //Navigacija
+
+    nav{
+
+        transition: 0.7s;
+        width: 100%;
+        background-color: transparent;
+        display: $f;
+        justify-content: $sa;
+        position: fixed;
+        top : 0;
+        z-index: 999;
+
+        @include d3{
+
+            display: none;
+
+        }
+
+        .left{
+
+            width: 30%;
+
+            a{
+
+                img{
+                    transition: 1s;
+                    width: 150px;
+                    max-width: 100%;
+                    height: auto;
+
+                }
+            }
+
+        }
+
+        .right{
+
+            width: 60%;
+
+            @include d2{
+
+                width: 65%;
+
+            }
+
+            ul{
+
+                display: $f;
+                height: 100%;
+                justify-content: $sa;
+                align-items: $c;
+                list-style-type: none;
+                margin-bottom: 0px;
+
+                li{
+
+                    a{
+                        text-decoration: none;
+                        color: tomato;
+                        transition: 0.8s;
+                        position: relative;
+                        font-size: 1.2em;
+
+                        &::before, &::after{
+                            height: 10px;
+                            width: 10px;
+                            position: absolute;
+                            content: '';
+                            -webkit-transition: all 0.35s ease;
+                            transition: all 0.35s ease;
+                            opacity: 0;
+                        }
+
+                        //#e24332
+
+                        &::before{
+                            left: -28%;
+                            top: -28%;
+                            border-left: 3px solid #e24332;
+                            border-top: 3px solid #e24332;
+                            -webkit-transform: translate(100%, 50%);
+                                    transform: translate(100%, 50%);
+                        }
+
+                        &::after{
+                            right: -28%;
+                            bottom: -28%;
+                            border-right: 3px solid #e24332;
+                            border-bottom: 3px solid #e24332;
+                            -webkit-transform: translate(-100%, -50%);
+                                    transform: translate(-100%, -50%);
+                        }
+
+                        &:hover:before, &:hover:after{
+                            -webkit-transform: translate(0%, 0%);
+                            transform: translate(0%, 0%);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    // Side nav
+
+    .sideNav{
+
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-image: url('../images/sideNavBackground.jpg');
+        z-index: 1005;
+        transform: translateY(-3000px);
+        transition: 1s;
+
+        .darkenSideNav{
+
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            flex-direction: $co;
+
+            .right{
+
+                p{
+
+                    color: orange;
+                    font-size: 2.2em;
+
+                }
+
+                ul{
+
+                    list-style-type: none;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    li{
+
+                        margin: 4% 0%;
+
+                        a{
+
+                            text-decoration: none;
+                            color: whitesmoke;
+                            transition: 0.6s;
+                            font-size: 1.2em;
+
+                            &:hover{
+
+                                color: orange;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .left{
+
+                a{
+
+                    img{
+
+                        max-width: 100%;
+                        height: auto;
+                        width: 90%;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .sideNav1{
+
+        transform: translateY(0px);
+
+    }
+
+    // Burger ikonica
+
+    #burgerActivate{
+
+        text-decoration: none;
+        position: fixed;
+        top: 4%;
+        left: 3%;
+        z-index: 1006;
+        display: none;
+
+        @include d3{
+
+            display: block;
+
+        }
+        
+        i{
+
+            color: tomato;
+            font-size: 2em;
+
+        }
+
+    }
+
+    .goTop{
+
+        position: fixed;
+        bottom: 3%;
+        right: 2%;
+        text-decoration: none;
+        z-index: 999;
+        transition: 0.7s;
+        transform: translateY(200px);
+
+        @include d5{
+
+            bottom: 2%;
+
+        }
+
+        i{
+
+            color: tomato;
+            font-size: 2.6em;
+            transition: .6s;
+
+            &:hover{
+
+                transform: translateY(-7px);
+                color: #8b2db6;
+
+            }
+
+        }
+
+    }
+
+    .goTop1{
+
+        transform: translateY(0px);
+
+    }
+
+    // Main sekcija
+
+    main{
+
+        width: 100%;
+        height: 100vh;
+        background-image: url('../images/main2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        .fader{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            flex-direction: $co;
+            text-align: $c;
+
+            h1{
+                background: linear-gradient(261deg, #9e6be6, #7b48c3, #8d46f1, #8a50df, #8a1dd3);
+                background-size: 400% 100%;
+                -webkit-animation: Violet 3s ease infinite;
+                -moz-animation: Violet 3s ease infinite;
+                animation: Violet 3s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 3.6em;
+                letter-spacing: 9px;
+
+                @include d4{
+
+                    font-size: 2.7em;
+
+                }
+
+                @include d6{
+
+                    font-size: 2.4em;
+
+                }
+                
+            }
+
+            h2{
+
+                color: tomato;
+                padding: 2% 0%;
+                letter-spacing: 3px;
+
+                @include d4{
+
+                    font-size: 1.7em;
+                    padding: 4% 0%;
+
+                }
+
+                @include d5{
+
+                    font-size: 1.4em;
+                    padding: 9% 0%;
+
+                }
+
+            }
+
+            a{
+                text-decoration: none;
+
+                i{
+                    font-size: 2.4em;
+                    color: tomato;
+                    transition: .7s;
+
+                    &:hover{
+                        transform: translateY(10px);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    // About Us sekcija
+
+    .about{
+        padding: 5% 0%;
+        background-image: url('../images/background.png');
+        background-attachment: fixed;
+        background-color: #141414;
+        display: $f;
+        flex-direction: $co;
+        justify-content: $c;
+        align-items: $c;
+
+        .aboutCont{
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            display: $f;
+
+            @include d6{
+
+                margin-bottom: 30% !important;
+
+            }
+
+            &:nth-child(2){
+
+                margin: 10% 0%;
+
+                @include d2{
+
+                    .rightAbout{
+
+                        order: 2;
+    
+                        img{
+    
+                            max-width: 100%;
+                            height: auto;
+                            border: 4px solid tomato;
+    
+                        }
+    
+                    }
+
+                }
+
+
+                    img{
+
+                        max-width: 100%;
+                        height: auto;
+                        border: 4px solid tomato;
+
+                    }
+
+
+                .leftAbout1{
+
+                    position: relative;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    @include d2{
+
+                        margin-bottom: 15%;
+
+                    }
+
+                    &:after{
+
+                        position: absolute;
+                        content: '';
+                        height: 80%;
+                        width: 4px;
+                        background-color: tomato;
+                        right: -5% !important;
+    
+                        @include d2{
+    
+                            right: -2% !important;
+    
+                        }
+    
+                        @include d3{
+    
+                            right: 0% !important;
+    
+                        }
+    
+                    }
+
+                    h2{
+                        color: tomato;
+                        font-size: 2.3em;
+                    }
+    
+                    p{
+                        padding: 3% 2% 5% 2%;
+                        text-align: justify;
+                        color: whitesmoke;
+                        line-height: 30px;
+    
+                        @include d3{
+    
+                            line-height: 35px;
+    
+                        }
+                    }
+    
+                    .pulse{
+                        text-decoration: none;
+                        color: tomato;
+                        width: 50%;
+                        text-align: $c;
+                        padding: 3% 0%;
+                        border: 4px solid tomato;
+                        transition: 0.6s;
+    
+    
+                        &:hover, &:focus{
+    
+                            animation: pulse 1s;
+                            box-shadow: 0 0 0 2em rgba(#fff,0);
+    
+                        }
+    
+                    }
+
+                }
+
+            }
+
+            .leftAbout{
+
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+                flex-direction: $co;
+                position: relative;
+
+                @include d2{
+
+                    margin: 12% 0% 15% 0%;
+
+                }
+
+                &:after{
+
+                    position: absolute;
+                    content: '';
+                    height: 80%;
+                    width: 4px;
+                    background-color: tomato;
+                    left: -5%;
+
+                    @include d2{
+
+                        left: -2%;
+
+                    }
+
+                    @include d3{
+
+                        left: 0%;
+
+                    }
+
+                }
+
+                h2{
+                    color: tomato;
+                    font-size: 2.3em;
+                }
+
+                p{
+                    padding: 3% 2% 5% 2%;
+                    text-align: justify;
+                    color: whitesmoke;
+                    line-height: 30px;
+
+                    @include d3{
+
+                        line-height: 35px;
+
+                    }
+                }
+
+                .pulse{
+                    text-decoration: none;
+                    color: tomato;
+                    width: 50%;
+                    text-align: $c;
+                    padding: 3% 0%;
+                    border: 4px solid tomato;
+                    transition: 0.6s;
+
+
+                    &:hover, &:focus{
+
+                        animation: pulse 1s;
+                        box-shadow: 0 0 0 2em rgba(#fff,0);
+
+                    }
+
+                }
+
+            }
+
+            .rightAbout{
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+
+    // Brainstorm sekcija
+
+    .brainStorm{
+        // background-image: url('../images/background.png');
+        background-attachment: fixed;
+        background-color: #141414;
+        
+        .contBrainstorm{
+
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            padding: 8% 0% 5% 0%;
+
+            h2{
+                color: orange;
+                font-size: 2.4em;
+                text-align: $c;
+
+                @include d3{
+
+                    font-size: 2em;
+                    padding-top: 10%;
+
+                }
+
+            }
+
+            .transpSlike{
+
+                width: 100%;
+                display: $f;
+                justify-content: $sa;
+
+                .brainBlokovi{
+                    margin: 8% 0%;
+                    display: $f;
+                    flex-direction: $co;
+                    align-items: $c;
+                    justify-content: $sb;
+
+                    &:nth-child(2){
+                        border-left: 4px solid orange;
+                        border-right: 4px solid orange;
+
+                        @include d2{
+
+                            border: none;
+
+                        }
+
+                        @include d3{
+
+                            border-top: 4px solid orange;
+                            border-bottom: 4px solid orange;
+                            padding: 5%;
+
+                        }
+
+                    }
+
+                    &:nth-child(3){
+
+                        @include d2{
+
+                            border-top: 4px solid orange;
+                            padding-top: 12%;
+
+                        }
+
+                        @include d3{
+
+                            padding-top: 0%;
+                            border: none;
+
+                        }
+
+                    }
+
+                    .blokSlikeHolder{
+
+                        width: 80%;
+                        margin: 0px auto;
+                        display: $f;
+                        align-items: $c;
+                        justify-content: $c;
+
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                            width: 50%;
+                        }
+                    }
+
+                    h3{
+                        padding-top: 7%;
+                        text-align: $c;
+                        font-size: 1.3em;
+                        line-height: 35px;
+                        color: whitesmoke;
+
+                        @include d1{
+
+                            font-size: 1.2em;
+
+                        }
+
+                        @include d3{
+
+                            font-size: 1.1em;
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    // Iks oks
+
+    .rockPaper {
+
+        background-image: url('../images/background.png');
+        background-attachment: fixed;
+        background-color: #141414;
+        font-family: frozen;
+        padding: 7% 0%;
+
+        h3{
+
+            text-align: $c;
+            font-size: 2em;
+            color: whitesmoke;
+
+            @include d3{
+
+                font-size: 1.7em;
+
+            }
+
+            @include d4{
+
+                line-height: 40px;
+
+            }
+
+            span{
+
+                font-weight: bold;
+
+            }
+
+            span:first-child{
+
+                color: rgb(219, 86, 190);
+
+            }
+
+            span:nth-child(2) {
+
+                color: rgb(192, 192, 192);
+
+            }
+
+            span:last-child {
+
+                color: tomato;
+
+            }
+
+        }
+
+        .rockPaperContainer {
+
+            .rockPaperRow {
+
+                #midScore {
+
+                    text-align: $c;
+                    color: whitesmoke;
+                    display: block;
+                    margin: 20px auto 0px auto;
+                    font-size: 2em;
+
+                }
+
+                .score {
+
+                    width: 100%;
+                    display: $f;
+                    justify-content: $sa;
+                    margin: 5% 0%;
+
+                    p{
+
+                        color: whitesmoke;
+                        font-size: 1.4em;
+
+                        @include d5{
+
+                            font-size: 1.2em;
+
+                        }
+
+                        span {
+                            color: whitesmoke;
+                            font-size: 1.3em;
+
+                            @include d5{
+
+                                font-size: 1em;
+    
+                            }
+                        }
+
+                    }
+
+                }     
+                
+                .status {
+
+                    color: whitesmoke;
+                    font-size: 2em;
+                    width: 100%;
+                    text-align: $c;
+
+                }
+
+                .winnerYou {
+
+                    color: rgb(101, 197, 101);
+
+                }
+
+                .winnerAI {
+
+                    color: tomato;
+
+                }
+
+            }
+
+            .rockPaperRow1 {
+
+                margin: 5% 0%;
+
+                .signs{
+
+                    width: 100%;
+                    display: $f;
+                    justify-content: $sa;
+                    align-items: $c;
+
+                    .holdSign{
+
+                        display: $f;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        a {
+
+                            width: 150px;
+                            height: 150px;
+                            display: $f;
+                            justify-content: $c;
+                            align-items: $c;
+                            border-radius: 50%;
+                            border: 3px solid whitesmoke;
+                            text-decoration: none;
+
+                            @include d3{
+
+                                width: 100px;
+                                height: 100px;
+
+                            }
+
+                            @include d6{
+
+                                width: 70px;
+                                height: 70px;
+
+                            }
+
+                            &:hover > i{
+
+                                transform: scale(1.3);
+                                color: tomato;
+
+                            }
+
+                            i{
+
+                                color: whitesmoke;
+                                font-size: 3em;
+                                transition: 1s;
+
+                                @include d6{
+
+                                    font-size: 1.5em;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    //
+
+    // Tic Tac Toe
+
+    .ticTacToe{
+        
+        display: $f;
+        flex-direction: $co;
+        justify-content: $c;
+        align-items: $c;
+        background-color: #141414;
+        padding: 10% 0%;
+
+        .orange{
+
+            color: orange;
+
+        }
+
+        #ticH3{
+
+            font-size: 2.6em;
+            color: whitesmoke;
+            padding-bottom: 5%;
+            text-align: $c;
+
+            @include d2{
+
+                padding-bottom: 9%;
+
+            }
+
+            @include d5{
+
+                font-size: 1.8em;
+
+            }
+        
+        }
+        
+        #ticH4{
+        
+            padding: 4%;
+            font-size: 2.6em;
+            display: none;
+        
+        }
+        
+        #statusPobeda {
+        
+            color: rgb(97, 209, 97);
+        
+        }
+        
+        #statusTie{
+        
+            color: rgb(156, 33, 156);
+        
+        }
+        
+        
+        #playAgain{
+        
+            text-decoration: none;
+            color: tomato;
+            margin-top: 5%;
+            display: block;
+            display: flex;
+            justify-content: center;
+            border: 3px solid tomato;
+            width: 20%;
+            padding: 1% 0%;
+            font-size: 1.3em;
+            transition: 0.7s;
+
+            @include d2{
+
+                margin-top: 12%;
+
+            }
+
+            &:hover{
+
+                box-shadow: inset 0 6.25em 0 0 tomato;
+                color: whitesmoke;
+
+            }
+        
+        }
+        
+        
+        
+        #statusPoraz {
+        
+            color: tomato;
+        
+        }
+        
+        
+        #ticTacToe{
+        
+            width: 50%;
+            display: block;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            @include d4{
+
+                margin: 10% 0%;
+
+            }
+        
+        }
+        
+        
+        #ticTacToe .box {
+        
+            display: block;
+            width: 26%;
+            background-color: #141414;
+            height: 120px;
+            transition: 0.5s;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        #ticTacToe .box i {
+        
+            color: purple;
+            font-size: 3.2em;
+        
+        }
+        
+        #ticTacToe .box:hover{
+        
+            background-color: #272727;
+        
+        }
+        
+        #box1{
+        
+            border-right: 3px solid tomato;
+            border-bottom: 3px solid tomato;
+        
+        }
+        
+        #box2{
+        
+            border-bottom: 3px solid tomato;
+        
+        }
+        
+        #box3{
+        
+            border-left: 3px solid tomato;
+            border-bottom: 3px solid tomato;
+        
+        }
+        
+        #box4{
+        
+            border-right: 3px solid tomato;
+        
+        }
+        
+        #box6{
+        
+            border-left: 3px solid tomato;
+        
+        }
+        
+        
+        #box7{
+        
+            border-top: 3px solid tomato;
+            border-right: 3px solid tomato;
+        
+        }
+        
+        #box8{
+        
+            border-top: 3px solid tomato;
+        
+        }
+        
+        #box9{
+        
+            border-top: 3px solid tomato;
+            border-left: 3px solid tomato;
+        
+        }
+
+        .moveMe{
+
+            padding: 4% 0%;
+
+        }
+
+        // Responsive za iks oks
+
+        @media only screen and (max-width: 998px) {
+
+            #ticTacToe{
+        
+                width: 80%;
+        
+            }
+        
+            #playAgain{
+        
+                width: 40%;
+                
+            }
+        
+        }
+        
+        
+        
+        @media only screen and (max-width: 768px) {
+        
+            #ticTacToe{
+        
+                width: 100%;
+        
+            }
+        
+            body{
+        
+                height: auto;
+        
+            }
+        
+            #playAgain{
+        
+                width: 50%;
+        
+            }
+        
+            h1{
+                
+                padding: 20% 0% 10% 0%;
+            
+            }
+        
+        }
+        
+        
+        @media only screen and (max-width: 500px) {
+        
+            #ticTacToe .box{
+        
+                width: 30%;
+        
+            }
+        
+            #ticTacToe .box i {
+        
+                font-size: 2.6em;
+        
+            }
+        
+            h2{
+                padding: 7%;
+            }
+        
+            #playAgain {
+        
+                padding: 4% 0%;
+                margin-top: 12%;
+        
+            }
+        
+        }
+        
+        
+        @media only screen and (max-width: 390px) {
+        
+            #ticTacToe .box{
+        
+                width: 32%;
+        
+            }
+        
+            #ticTacToe .box i {
+        
+                font-size: 2.3em;
+        
+            }
+        
+            #playAgain {
+        
+                padding: 6% 0%;
+                width: 70%;
+                margin-top: 12%;
+        
+            }
+        
+        
+        }
+
+    }
+
+
+    // Avatar Sekcija
+
+    .avatar{
+
+        width: 100%;
+        background-image: url('../images/background.png');
+        background-attachment: fixed;
+        background-color: #141414;
+        padding: 10% 0%;
+
+        .avatarCont{
+
+
+            h2{
+                    
+                    text-align: $c;
+                    background: linear-gradient(261deg, #bd2fda, #8f36aa, #7c189b, #6c2fb3, #8940b9);
+                    background-size: 300% 200%;
+                    -webkit-animation: Violet 3s ease infinite;
+                    -moz-animation: Violet 3s ease infinite;
+                    animation: Violet 3s ease infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-bottom: 5%;
+                    font-size: 3em;
+                    letter-spacing: 3px;
+
+                    @include d4{
+
+                        font-size: 2.5em;
+
+                    }
+
+            }
+
+            
+            .avatarButtons{
+
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+                margin-bottom: 5%;
+
+                @include d5{
+
+                    margin: 10% 0%;
+
+                }
+
+                button{
+
+                    background: transparent;
+                    border: 2px solid tomato;
+                    width: 20%;
+                    padding: 1% 0%;
+                    color: tomato;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    transition: 1s;
+
+                    @include d2{
+
+                        width: 30%;
+                        padding: 1.4% 0%;
+                        margin-bottom: 10%;
+
+                    }
+
+                    @include d3{
+
+                        width: 40%;
+
+                    }
+
+                    @include d4{
+
+                        width: 45%;
+                        padding: 2% 0%;
+
+                    }
+
+                    @include d5{
+
+                        width: 50%;
+
+                    }
+
+                    @include d6{
+
+                        font-size: 0.75em;
+
+                    }
+
+                }
+
+                #avatarButton{
+
+                    border-top-left-radius: 6px;
+                    border-bottom-left-radius: 6px;
+
+                    &:hover{
+
+                        box-shadow: inset 17.5em 0 0 0 tomato;
+                        color: whitesmoke;
+
+                        @include d5{
+
+                            box-shadow: none;
+
+                        }
+
+                    }
+
+                }
+
+                #avatarCustomize{
+
+                    border-top-right-radius: 6px;
+                    border-bottom-right-radius: 6px;
+
+                    &:hover{
+
+                        box-shadow: inset -17.5em 0 0 0 tomato;
+                        color: whitesmoke;
+
+                        @include d5{
+
+                            box-shadow: none;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .avatarMakerDiv{
+
+                .avatarCardHolder{
+
+                    width: 100%;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+
+                h3{
+
+                    background: linear-gradient(261deg, #e64e33, #e23a34, #ca3e1b, #c25744, #f7471b);
+                    background-size: 800% 400%;
+                    -webkit-animation: Violet 3s ease infinite;
+                    -moz-animation: Violet 3s ease infinite;
+                    animation: Violet 3s ease infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    padding-bottom: 5%;
+                    font-size: 2.7em;
+                    letter-spacing: 3px;
+                    text-align: $c;
+
+                }
+
+                #avatarCard{
+
+                    width: 30%;
+                    height: 450px;
+                    border: 5px solid tomato;
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    flex-direction: $co;
+                    margin: 0px auto;
+
+                    @include d2{
+
+                        width: 45%;
+
+                    }
+
+                    @include d3{
+
+                        width: 65%;
+
+                    }
+
+                    @include d5{
+
+                        width: 80%;
+
+                    }
+
+                    @include d6{
+
+                        width: 95%;
+
+                    }
+
+                    .avatarPuppet{
+
+                        width: 100%;
+                        height: 75%;
+                        background-color: #141414;
+                        position: relative;
+
+                        .avatarHead{
+
+                            position: absolute;
+                            left: 35%;
+                            top: 3%;
+                            z-index: 997;
+
+                            img{
+
+                                width: 50%;
+                                max-width: 100%;
+                                height: auto;
+
+                            }
+
+                        }
+
+                        .avatarBody{
+                            
+                            position: absolute;
+                            left: 28.5%;
+                            top: 26%;
+                            z-index: 996;
+
+                            img{
+
+                                width: 70%;
+                                max-width: 100%;
+                                height: auto;
+
+                            }
+
+                        }
+
+                        .avatarArm{
+
+                            background-color: tomato;
+                            position: absolute;
+
+                        }
+
+                        .leftArm{
+
+                            width: 35%;
+                            height: 8px;
+                            transform: rotate(300deg);
+                            top: 47%;
+                            left: 15%;
+
+                        }
+
+                        .rightArm{
+
+                            width: 35%;
+                            height: 8px;
+                            transform: rotate(-300deg);
+                            top: 47%;
+                            right: 15%;
+
+                        }
+
+                        .avatarLeg{
+
+                            background-color: tomato;
+                            position: absolute;
+
+                        }
+
+                        .leftLeg{
+
+                            width: 35%;
+                            height: 8px;
+                            transform: rotate(300deg);
+                            top: 74%;
+                            left: 21%;
+
+                        }
+
+                        .rightLeg{
+
+                            width: 35%;
+                            height: 8px;
+                            transform: rotate(-300deg);
+                            top: 74%;
+                            right: 21%;
+
+                        }
+
+                        .avatarWeapon{
+
+                            position: absolute;
+                            left: 70%;
+                            top: 39%;
+                            z-index: 998;
+
+                            img{
+
+                                width: 90%;
+                                max-width: 100%;
+                                height: auto;
+
+                            }
+
+                        }
+
+                        .avatarShield{
+
+                            position: absolute;
+                            left: 16.5%;
+                            top: 48%;
+                            z-index: 998;
+
+                            img{
+
+                                width: 35%;
+                                max-width: 100%;
+                                height: auto;
+
+                            }
+
+                        }
+
+                    }
+
+                    .avatarNameAndLevel{
+
+                        width: 100%;
+                        height: 25%;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        align-items: $c;
+                        z-index: 997;
+                        background-color: #141414;
+                        border-top: 3.5px solid tomato;
+
+                        h4{
+
+                            color: tomato;
+                            letter-spacing: 3px;
+                            font-size: 1.8em;
+
+                        }
+
+                        p{
+                            
+                            margin-bottom: 0%;
+                            color: whitesmoke;
+                            
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // Customize Avatara
+
+                .avatarCustomizeDiv{
+
+                    width: 100%;
+                    background-color: #141414;
+                    padding: 5% 0% 9% 0%;
+
+                    h3{
+
+                        text-align: $c;
+                        background: linear-gradient(261deg, #e64e33, #e23a34, #ca3e1b, #c25744, #f7471b);
+                        background-size: 800% 400%;
+                        -webkit-animation: Violet 3s ease infinite;
+                        -moz-animation: Violet 3s ease infinite;
+                        animation: Violet 3s ease infinite;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        padding: 5%;
+                        font-size: 2.2em;
+                        letter-spacing: 3px;
+
+                    }
+
+                    .customization{
+
+                        width: 100%;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $sa;
+                        align-items: $c;
+
+                        .custom{
+
+                            display: $f;
+                            flex-direction: $co;
+                            justify-content: $sa;
+                            align-items: $c;
+
+                            p{
+
+                                color: whitesmoke;
+                                font-size: 1.6em;
+                                padding-bottom: 4%;
+                                letter-spacing: 2px;
+                                padding: 5%;
+
+                            }
+
+                            .headChoices{
+
+                                width: 100%;
+                                display: $f;
+                                justify-content: $sa;
+                                align-items: $c;
+
+                            }
+
+                            .armorChoices{
+
+                                width: 100%;
+                                display: $f;
+                                justify-content: $sa;
+                                align-items: $c;
+
+                                label{
+
+                                    width: 20%;
+
+                                }
+
+                            }
+
+                            .armsLegs{
+
+                                width: 100%;
+                                display: $f;
+                                justify-content: $sa;
+                                align-items: $c;
+                                margin: 5% 0%;
+
+                                .customPart{
+
+                                    display: $f;
+                                    flex-direction: $co;
+                                    justify-content: $c;
+                                    align-items: $c;
+                                    text-align: $c;
+
+                                    .colorPicker{
+
+                                        background: transparent;
+                                        border: none;
+                                        width: 30%;
+                                        height: 30px;
+
+                                    }
+
+                                }
+
+                            }
+
+                            .pulse{
+                                text-decoration: none;
+                                color: rgb(228, 162, 64);
+                                width: 30%;
+                                text-align: $c;
+                                padding: 2% 0%;
+                                border: 4px solid rgb(221, 162, 73);
+                                transition: 0.6s;
+                                letter-spacing: 2px;
+                                margin-top: 5%;
+
+                                @include d5{
+
+                                    width: 50%;
+
+                                }
+            
+            
+                                &:hover, &:focus{
+            
+                                    animation: pulse1 1s;
+                                    box-shadow: 0 0 0 2em rgba(#fff,0);
+            
+                                }
+            
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+    // Corvus
+
+    .corvus{
+
+        width: 100%;
+        background-image: url('../images/background.png');
+        background-attachment: fixed;
+        background-color: #141414;
+        display: $f;
+        flex-direction: $co;
+        align-items: $c;
+        justify-content: $c;
+        text-align: $c;
+        padding: 8% 0%;
+
+
+        .topCorvus{
+
+            width: 100%;
+
+            h3{
+
+                color: tomato;
+                font-size: 3em;
+
+                @include d5{
+
+                    font-size: 2.6em;
+
+                }
+
+                span{
+
+                    background: linear-gradient(261deg, #9e6be6, #7b48c3, #8d46f1, #8a50df, #8a1dd3);
+                    background-size: 400% 100%;
+                    -webkit-animation: Violet 3s ease infinite;
+                    -moz-animation: Violet 3s ease infinite;
+                    animation: Violet 3s ease infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 1.3em;
+                    letter-spacing: 3px;
+                    padding: 0% .5%;
+
+                }
+
+            }
+
+            h4{
+
+                color: whitesmoke;
+                padding-top: 1%;
+                font-size: 1.7em;
+
+            }
+
+        }
+
+        .midCorvus{
+
+            margin: 10% 0%;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            flex-direction: $co;
+            width: 70%;
+
+            #imeCorvus{
+
+                border: 3px solid tomato;
+                margin-bottom: 7%;
+                border-radius: 6px;
+                margin: 0px solid auto;
+                padding: 1%;
+                color: #c453c4;
+                width: 40%;
+                background-color: #141414;
+
+                @include d2{
+
+                    width: 50%;
+
+                }
+
+                @include d3{
+
+                    width: 70%;
+
+                }
+
+                @include d5{
+
+                    width: 90%;
+
+                }
+
+                &::placeholder{
+
+                    color: tomato;
+
+                }
+
+            }
+
+            #sacuvajImeCorvus{
+
+                background-color: #141414;
+                border: 4px solid tomato;
+                border-radius: 6px;
+                color: tomato;
+                padding: 1% 0%;
+                transition: 0.6s;
+                letter-spacing: 3px;
+                width: 30%;
+                
+                @include d2{
+
+                    width: 40%;
+                    padding: 1.4% 0%;
+
+                }
+
+                @include d3{
+
+                    width: 55%;
+                    margin-top: 5%;
+
+                }
+
+                @include d5{
+
+                    margin: 15% 0%;
+                    padding: 1.9% 0%;
+                    width: 65%;
+
+                }
+
+                &:hover{
+
+                    background-color: tomato;
+                    color: whitesmoke;
+
+                }
+
+            }
+
+        }
+
+        .botCorvus{
+
+            width: 40%;
+
+            @include d3{
+
+                width: 60%;
+
+            }
+
+            .talk{
+
+                border: none;
+                background-color: #141414;
+                color: orange;
+                width: 65%;
+                padding: 2.5%;
+                border: 4px solid orange;
+                border-radius: 6px;
+                margin-bottom: 10%;
+                transition: 1s;
+
+                @include d2{
+
+                    width: 80%;
+                    margin-bottom: 25%;
+
+                }
+
+                @include d3{
+
+                    width: 100%;
+
+                }
+
+                &:hover, &:focus{
+
+                    box-shadow: inset 0 5.25em 0 0 orange;
+                    color: whitesmoke;
+
+                }
+
+            }
+
+        }
+
+        #corvusHeard{
+
+            color: whitesmoke;
+
+            span{
+
+                color: tomato;
+
+            }
+
+        }
+
+        .whatCanYouSay{
+
+            width: 50%;
+            margin-top: 3%;
+            color: whitesmoke;
+            font-size: 1.2em;
+            text-align: left;
+            padding: 3% 0%;
+            background-color: #141414;
+            border: 3px solid whitesmoke;
+            border-radius: 6px;
+
+            @include d2{
+
+                width: 70%;
+
+            }
+
+            @include d3{
+
+                width: 90%;
+                margin: 8%;
+
+            }
+
+            @include d4{
+
+                width: 95%;
+
+            }
+
+            p{
+
+                text-align: $c;
+                font-size: 1.3em;
+                padding-bottom: 4%;
+
+            }
+
+            ul{
+
+                display: block;
+                justify-content: $c;
+                display: $f;
+                flex-direction: $co;
+                align-items: $sa;
+                margin-left: 5%;
+
+                @include d5{
+
+                    margin-left: 10%;
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+    // Shop
+
+    .shopDarken{
+
+        width: 100%;
+        background-color: #141414;
+
+        h2{
+
+            text-align: $c;
+            font-size: 3em;
+            color: orange;
+            padding-top: 8%;
+
+            @include d4{
+
+                padding: 10%;
+
+            }
+
+            @include d5{
+
+                font-size: 2.6em;
+
+            }
+
+            @include d6{
+
+                font-size: 2.2em;
+
+            }
+
+        }
+
+        h3{
+
+            color: tomato;
+            text-align: $c;
+            
+            @include d3{
+
+                padding-top: 10%;
+
+            }
+
+        }
+
+        #categoryHeading{
+
+            padding-bottom: 3%;
+
+        }
+
+        #sortHeading{
+
+            padding-top: 3%;
+
+        }
+
+        .birajDarken{
+
+            margin: 6% 0% !important;
+            width: 100%;
+
+
+            .checkShop{
+
+                display: none !important;
+                
+            }
+
+        }
+
+        .searchAndSort{
+
+            width: 100%;
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            margin: 6% 0% !important;
+            
+            @include d4{
+
+                flex-direction: $co;
+
+            }
+
+            #birajDarkenDrop{
+
+                background: transparent;
+                border: 3px solid #eb6750;
+                color: #eb6750;
+                padding: 0.6%;
+
+                option{
+
+                    background-color: #141414;
+
+                }
+
+                @include d4{
+
+                    margin: 10% 0%;
+
+                }
+
+            }
+
+            .odvojiMe{
+
+                //margin: 0% 2%;
+
+            }
+
+            #trazi{
+
+                background: transparent;
+                border: 3px solid tomato;
+                padding: 0.5%;
+                color: orange;
+
+                @include d4{
+
+                    width: 60%;
+
+                }
+
+                @include d6{
+
+                    width: 80%;
+
+                }
+
+                &::placeholder{
+
+                    color: tomato;
+
+                }
+
+            }
+
+        }
+
+        .rowShop{
+
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            padding-bottom: 8%;
+
+            .colShop{
+                
+                display: $f;
+                justify-content: $c;
+
+                .product{
+
+                    width: 90%;
+                    margin: 0px auto;
+                    border: 4px solid tomato;
+                    box-shadow: none;
+                    margin: 10% 0%;
+                    transition: 0.5s;
+                    color: whitesmoke;
+
+                    &:hover{
+
+                        -webkit-box-shadow: 2px 3px 28px 6px rgba(232,102,102,1);
+                        -moz-box-shadow: 2px 3px 28px 6px rgba(232,102,102,1);
+                        box-shadow: 2px 3px 28px 6px rgba(232,102,102,1);
+
+                    }
+
+                    .productPicture{
+
+
+                        img{
+
+                            max-width: 100%;
+                            height: auto;
+                            display: block;
+                            margin: 0px auto !important;
+
+                        }
+
+                        .nameOfTheGame{
+
+                            padding: 6% 0%;
+
+                        }
+
+                        .cenaIgre{
+
+                            width: 100%;
+                            display: $f;
+                            justify-content: $sa;
+                            align-items: $c;
+                            margin-bottom: 5%;
+
+                            p{
+
+                                margin-bottom: 0px;
+                                text-align: $c;
+                                font-size: 1.3em;
+
+                            }
+                            
+                            .staraCena{
+
+                                color: tomato;
+
+                            }
+
+                        }
+
+                        .categoryShop{
+
+                            padding: 6% 3%;
+                            text-align: $c;
+
+                            .kateg{
+
+                                color: #ad40c9;
+                                font-size: 1.3em;
+                                padding: 0% 2%;
+
+                            }
+
+                        }
+
+                        .orderGame{
+
+                            display: block;
+                            border-top: 4px solid tomato;
+                            width: 100%;
+                            display: $f;
+                            justify-content: $c;
+                            padding: 5% 0%;
+                            color: tomato;
+                            text-decoration: none;
+                            transition: 0.6s;
+
+                            &:hover{
+
+                                /*box-shadow: inset -16.5em 0 0 0 tomato,
+                                inset 16.5em 0 0 0 tomato;
+                                color: whitesmoke;*/
+
+                                box-shadow: inset 0 -5.25em tomato;
+                                color: whitesmoke;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+    // Checkboxovi
+
+
+    ul.checksHolder {
+        list-style: none;
+        width: 100%;
+        padding: 20px;
+        display: $f;
+        justify-content: $sa;
+        align-items: $c;
+    }
+    ul.checksHolder li{
+     // display: inline;
+    }
+    ul.checksHolder li label{
+        width: 100%;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, .9);
+        border: 2px solid rgba(139, 139, 139, .3);
+        color: tomato;
+        border-radius: 25px;
+        white-space: nowrap;
+        margin: 3% 0px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: all .2s;
+    }
+    
+    ul.checksHolder li label {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+    
+    ul.checksHolder li label::before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 12px;
+        padding: 2px 6px 2px 2px;
+        content: "\f462";
+        transition: transform .3s ease-in-out;
+    }
+    
+    ul.checksHolder li input[type="checkbox"]:checked + label::before {
+        content: "\f11b";
+        transform: rotate(-360deg);
+        transition: transform .3s ease-in-out;
+    }
+    
+    ul.checksHolder li input[type="checkbox"]:checked + label {
+        border: 2px solid orange;
+        background-color: orange;
+        color: #fff;
+        transition: all .2s;
+    }
+    
+    ul.checksHolder li input[type="checkbox"] {
+      display: absolute;
+    }
+    ul.checksHolder li input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+    }
+    ul.checksHolder li input[type="checkbox"]:focus + label {
+      border: 2px solid #dd5046;
+    }
+
+    .cart{
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+        max-width: 100% !important;
+        border: none;
+        position: fixed;
+        z-index: 1000;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+        overflow-y: scroll;
+        max-height: 100%;
+        height: 2000px;
+        background-color: #141414;
+        transform: translateX(-3320px);
+        transition: 1s;
+        padding: 8% 0%;
+
+            .modalHead{
+                width: 100%;
+
+                #zatvoriModal{
+
+                    position: absolute;
+                    right: 3.5%;
+                    top: 5%;
+                    text-decoration: none;
+
+                    @include d4{
+
+                        top: 5%;
+                        right: 15%;
+
+                    }
+
+                    @include d6{
+
+                        right: 8%;
+                        top: 3%;
+
+                    }
+
+                    i{
+
+                        font-size: 1.6em;
+                        color: tomato;
+
+                    }
+
+                }
+
+                p{
+
+                    color: tomato;
+                    font-size: 1.7em;
+                    padding-top: 3%;
+                    padding-bottom: 4%;
+                    display: $f;
+                    justify-content: $sa;
+    
+                }
+
+            }
+
+        .modalBody{
+
+            max-width: 100% !important; 
+            padding: 0%;
+
+            #noProductsPar{
+
+                color: tomato;
+                text-align: $c;
+                padding: 5% 0%;
+                font-size: 2em;
+
+                @include d5{
+
+                    font-size: 1.65em;
+
+                }
+
+            }
+
+            #modalTabela{
+
+                width: 100%;
+                margin: 0px auto;
+                
+                thead{
+
+                    background-color: tomato;
+                    width: 100%;
+                    color: whitesmoke;
+
+                    tr{
+
+                        th{
+
+                            text-align: $c;
+
+                            @include d5{
+
+                                &:nth-child(1){
+
+                                    display: none;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                tbody{
+
+                    
+                    tr{
+
+                        margin: 15% 0% !important;
+                        border-bottom: 4px solid tomato;
+                        color: whitesmoke;
+
+                        td{
+                            width: 15%;
+                            text-align: $c;
+                            padding: 3% 0%;
+                            
+
+                            @include d4{
+
+                                width: 10%;
+                                font-size: 0.8em;
+
+                            }
+
+                            @include d5{
+
+                                width: 19%;
+
+                                &:nth-child(1){
+
+                                    display: none;
+
+                                }
+
+                            }
+
+                            
+                            .slikaCart{
+
+                                max-width: 100%;
+                                display: block;
+                                margin: 0px auto;
+                                height: auto;
+                                width: 80%;
+
+                            }
+
+                            .addMeMore{
+
+                                width: 65%;
+                                line-height: 1.9em;
+                                border: 3px solid tomato;
+                                background-color: transparent;
+                                color: whitesmoke;
+                                transition: .6s;
+
+                                @include d1{
+
+                                    width: 90%;
+
+                                }
+
+                                @include d4{
+
+                                    font-size: 0.9em;
+                                    width: 95%;
+
+                                }
+
+                                @include d6{
+
+                                    font-size: 0.81em;
+
+                                }
+                                
+
+
+                                &:hover{
+
+                                    box-shadow: inset 9.5em 0 0 0 tomato;
+
+                                }
+
+                            }
+
+                            .deleteMeMore{
+
+                                width: 65%;
+                                line-height: 1.9em;
+                                border: 3px solid tomato;
+                                background-color: transparent;
+                                color: whitesmoke;
+                                transition: .9s;
+
+                                @include d4{
+
+                                    font-size: 0.9em;
+                                    width: 95%;
+
+                                }
+
+                                &:hover{
+
+                                    box-shadow: inset -9.5em 0 0 0 tomato;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .modFooter{
+
+            width: 60%;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            margin: 0px auto;
+
+            @include d1{
+
+                width: 80%;
+
+            }
+
+            @include d5{
+
+                flex-direction: $co;
+
+            }
+
+            .proceedButton{
+
+                background-color: tomato;
+                color: whitesmoke;
+                padding: 1.3%;
+                width: 30%;
+                border: none;
+                margin: 4% 2%;
+
+                @include d2{
+
+                    width: 40%;
+
+                }
+
+                @include d4{
+
+                    width: 60%;
+
+                }
+
+                @include d5{
+
+                    width: 80%;
+
+                }
+
+            }
+
+            .resetLocalGames{
+
+                background-color: whitesmoke;
+                padding: 1.2%;
+                width: 30%;
+                border: none;
+                margin: 4% 2%;
+
+                @include d5{
+
+                    width: 80%;
+                    margin: 5% 0%;
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .cart1{
+
+        transform: translateX(0px);
+
+    }
+
+    // Cart ikonica
+
+    #prikaziCart{
+
+        position: fixed;
+        bottom: 3.2%;
+        left: 2%;
+        text-decoration: none;
+        z-index: 999;
+        transform: translateX(-100px);
+        transition: 1s;
+
+        i{
+
+            color: tomato;
+            font-size: 2.1em;
+
+        }
+
+    }
+
+    .prikazanCart{
+
+        transform: translateX(0px) !important;
+
+    }
+
+    .drzacPopupa{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0%;
+        bottom: 0% !important;
+        z-index: 1000;
+        display: none;
+
+        .checkBlock{
+
+            position: fixed;
+            width: 35%;
+            height: 35%;
+            top: 32.5%;
+            left: 32.5%;
+            z-index: 999;
+            display: $f;
+            justify-content: $c !important;
+            flex-direction: $co !important;
+            align-items: $c !important;
+            padding: 4% 0%;
+            background-color: #141414;
+            border: 3px solid whitesmoke;
+
+            @include d2{
+
+                width: 80%;
+                left: 10%;
+
+            }
+
+            @include d5{
+
+                width: 90%;
+                left: 5%;
+
+            }
+    
+            p{
+    
+                margin-bottom: 0px;
+                font-size: 1.5em;
+                text-align: $c;
+                padding: 5% 1.4% 0% 1.4%;
+                letter-spacing: 2px;
+    
+            }
+    
+            i{
+    
+                font-size: 2.4em;
+                text-align: $c;
+    
+            }
+    
+        }
+
+    }
+
+    .addedBlock{
+
+        color: #5ed85e;
+
+    }
+
+    .addedNameBlock{
+
+        color: #5ed85e;
+
+    }
+
+    .alreadyThereBlock{
+
+        color: tomato;
+
+    }
+
+    .nameNotCorrect{
+
+        color: tomato;
+
+    }
+
+    .forma{
+
+        width: 100%;
+        background-color: #141414;
+        padding: 6% 0%;
+
+        .formaCont{
+
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+            flex-direction: $co;
+            padding: 7% 0%;
+            
+            h3{
+
+                color: orange;
+                font-size: 2.6em;
+
+            }
+
+            form{
+
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+                flex-direction: $co;
+                margin-top: 8%;
+                width: 80%;
+                color: orange;
+
+                #area{
+
+                    resize: none;
+
+                    @include d3{
+
+                        width: 80%;
+
+                    }
+
+                    @include d6{
+
+                        width: 90%;
+
+                    }
+
+                }
+
+                p{
+
+                    font-size: 1.2em;
+
+                }
+
+                .errorForm{
+
+                    color: tomato;
+                    text-align: $c;
+
+                }
+
+                .uspehPar{
+
+                    color: #4bce4b;
+                    text-align: $c;
+
+                }
+                
+                .inputPolje{
+
+                    width: 60%;
+                    padding: 0.4%;
+                    color: orange;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 4px solid orange;
+                    margin-bottom: 3%;
+
+                    @include d3{
+
+                        margin: 8% 0%;
+
+                    }
+
+                    @include d5{
+
+                        width: 80%;
+
+                    }
+
+                    @include d6{
+
+                        width: 90%;
+
+                    }
+
+                    &::placeholder{
+
+                        color: whitesmoke;
+                        padding-left: 0.5%;
+
+                    }
+
+                }
+
+                #tema{
+
+                    background-color: transparent;
+                    border: 3px solid orange;
+                    color: whitesmoke;
+                    padding: 1.2%;
+                    margin-bottom: 3%;
+
+                    option{
+
+                        background-color: #141414;
+
+                    }
+
+                }
+
+                #posaljiPodatke{
+
+                    background-color: transparent;
+                    border: 3px solid orange;
+                    color: orange;
+                    width: 20%;
+                    line-height: 2.5em;
+                    transition: 1s;
+                    margin-bottom: 3%;
+
+                    @include d1{
+
+                        width: 25%;
+
+                    }
+
+                    @include d2{
+
+                        width: 35%;
+
+                    }
+
+                    @include d3{
+
+                        width: 45%;
+
+                    }
+
+                    &:hover{
+
+                        box-shadow: inset 0 -3.25em 0 0 orange;
+                        color: whitesmoke;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    footer{
+
+        width: 100%;
+        background-color: #141414;
+        border-top: 3px solid orange;
+
+        .rowFooter{
+
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            padding: 4% 0%;
+
+            .colFooter{
+
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+
+                &:nth-child(1){
+
+                    order: 2;
+
+                }
+
+                &:nth-child(3){
+
+                    order: 3;
+
+                }
+
+                p{
+
+                    color: orange;
+                    font-size: 1.2em;
+
+                }
+
+                #navigacijaPar{
+
+                    font-size: 1.8em;
+
+                }
+
+                .right{
+
+                    ul{
+
+                        list-style-type: none;
+
+                        li{
+
+                            text-align: $c;
+                            margin: 10% 0%;
+
+                            a{
+
+                                text-decoration: none;
+                                color: whitesmoke;
+                                transition: 0.6s;
+
+                                &:hover{
+
+                                    color: orange;
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .rowFooter1{
+
+            padding: 1.5% 0%;
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            flex-direction: $co;
+
+            p{
+
+                color: orange;
+                font-size: 1.8em;
+
+            }
+
+            .usefulLinks{
+
+                width: 100%;
+                display: $f;
+                justify-content: $sa;
+                align-items: $c;
+                padding: 1.7% 0%;
+
+                a{
+
+                    text-decoration: none;
+                    color: whitesmoke;
+                    transition: 0.6s;
+    
+                    &:hover{
+    
+                        color: orange;
+    
+                    }
+    
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+// ZAJEDNICKO ZA CUSTOMIZE
+
+label{
+
+    width: 18%;
+
+    .imgRadio{
+
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+    }
+
+    img{
+
+        width: 80%;
+        display: block;
+        margin: 0px auto;
+        padding: 3%;
+
+    }
+
+
+    .imgRadio + img{
+
+        cursor: pointer;
+
+    }
+
+    .imgRadio:checked + img{
+
+        background-color: lighten(#141414,20%);
+
+    }
+
+}
+
+
+.errorPar{
+
+    color: tomato !important;
+    text-align: $c !important;
+
+    @include d4{
+
+        font-size: 1.1em !important;
+
+    }
+
+}
+
+.successPar{
+
+    text-align: $c !important;
+    color: #68e068 !important;
+
+    @include d4{
+
+        font-size: 1.1em !important;
+
+    }
+
+
+}
+
+.moveMe{
+
+    font-size: 2.3em !important;
+
+}
+
+.errorAvatarPar{
+
+    color: tomato !important;
+    text-align: $c !important;
+
+    @include d4{
+
+        font-size: 1.1em !important;
+
+    }
+
+}
+
+::selection {
+
+    background-color: yellow;
+
+}
+
+// Skrolbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: tomato;
+    border-radius: 5px;
+  }
+  
+
+
+// Animacije
+
+@keyframes Violet {
+    0%{background-position:10% 30%}
+    50%{background-position:100% 31%}
+    100%{background-position:30% 10%}
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 tomato; }
+  }
+
+  @keyframes pulse1 {
+    0% { box-shadow: 0 0 0 0 orange; }
+  }
