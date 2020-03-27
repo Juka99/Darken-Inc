@@ -8,7 +8,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/ageOfEmpires.jpg",
+            "putanja" : "/images/ageOfEmpires.jpg",
             "alt" : "Age Of Empires Game"
 
         },
@@ -38,7 +38,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/ageOfMythology.jpg",
+            "putanja" : "/images/ageOfMythology.jpg",
             "alt" : "Age Of Mythology Game"
 
         },
@@ -68,7 +68,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/callOfDuty.jpg",
+            "putanja" : "/images/callOfDuty.jpg",
             "alt" : "Call Of Duty Game"
 
         },
@@ -98,7 +98,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/civilization6.jpg",
+            "putanja" : "/images/civilization6.jpg",
             "alt" : "Civilization VI Game"
 
         },
@@ -128,7 +128,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/counterStrike.jpg",
+            "putanja" : "/images/counterStrike.jpg",
             "alt" : "Counter Strike Game"
 
         },
@@ -158,7 +158,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/darkSouls.jpeg",
+            "putanja" : "/images/darkSouls.jpeg",
             "alt" : "Dark Souls Game"
 
         },
@@ -188,7 +188,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/crysis.jpg",
+            "putanja" : "/images/crysis.jpg",
             "alt" : "Crysis Game"
 
         },
@@ -218,7 +218,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/witcher.jpg",
+            "putanja" : "/images/witcher.jpg",
             "alt" : "Witcher 3 Game"
 
         },
@@ -248,7 +248,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/warhammer.jpg",
+            "putanja" : "/images/warhammer.jpg",
             "alt" : "Warhammer 2 Game"
 
         },
@@ -278,7 +278,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/destiny.jpg",
+            "putanja" : "/images/destiny.jpg",
             "alt" : "Destiny 2 Game"
 
         },
@@ -308,7 +308,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/doom.jpg",
+            "putanja" : "/images/doom.jpg",
             "alt" : "Doom 3 Game"
 
         },
@@ -338,7 +338,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/starCraft.jpg",
+            "putanja" : "/images/starCraft.jpg",
             "alt" : "Star Craft 2 Game"
 
         },
@@ -368,7 +368,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/spore.jpg",
+            "putanja" : "/images/spore.jpg",
             "alt" : "Spore Game"
 
         },
@@ -398,7 +398,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/massEffect.jpg",
+            "putanja" : "/images/massEffect.jpg",
             "alt" : "Spore Game"
 
         },
@@ -428,7 +428,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/medalOfHonor.jpg",
+            "putanja" : "/images/medalOfHonor.jpg",
             "alt" : "Medal Of Honor Game"
 
         },
@@ -458,7 +458,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/skyrim.jpg",
+            "putanja" : "/images/skyrim.jpg",
             "alt" : "Skyrim Game"
 
         },
@@ -488,7 +488,7 @@
 
         "slika" : {
 
-            "putanja" : "../images/rainbowSixSiege.jpg",
+            "putanja" : "/images/rainbowSixSiege.jpg",
             "alt" : "Rainbow Six Siege Game"
 
         },
