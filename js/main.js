@@ -586,7 +586,7 @@ function ispisiProizvode(data){
 
                     <div class="cenaIgre">
                     
-                        <p class='novaCena'>Cena : $${el.novaCena}</p>`;
+                        <p class='novaCena'>Price : $${el.novaCena}</p>`;
 
                         if(el.imaStaruCenu){
 
